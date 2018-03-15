@@ -15,7 +15,8 @@ CREATE TABLE [Sales].[Orders]
 [InternalComments] [nvarchar] (max) COLLATE Latin1_General_100_CI_AS NULL,
 [PickingCompletedWhen] [datetime2] NULL,
 [LastEditedBy] [int] NOT NULL,
-[LastEditedWhen] [datetime2] NOT NULL CONSTRAINT [DF_Sales_Orders_LastEditedWhen] DEFAULT (sysdatetime())
+[LastEditedWhen] [datetime2] NOT NULL CONSTRAINT [DF_Sales_Orders_LastEditedWhen] DEFAULT (sysdatetime()),
+[Articles] [int] NULL
 ) ON [USERDATA] TEXTIMAGE_ON [USERDATA]
 GO
 ALTER TABLE [Sales].[Orders] ADD CONSTRAINT [PK_Sales_Orders] PRIMARY KEY CLUSTERED  ([OrderID]) ON [USERDATA]
